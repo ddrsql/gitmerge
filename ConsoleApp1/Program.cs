@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Text.Json;
 
 internal class Program
@@ -6,9 +7,18 @@ internal class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
-        var str = string.Empty;
+        var str = StringStringBuilder();
         Test(str.ToString());
         Console.WriteLine(str);
+    }
+
+    private static StringBuilder StringStringBuilder()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.Append("User1");
+        stringBuilder.Append("-");
+        stringBuilder.Append("StringBuilder");
+        return stringBuilder;
     }
 
     private static void Test(string description)
