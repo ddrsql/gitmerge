@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Text.Json;
 
 internal class Program
 {
@@ -8,7 +9,8 @@ internal class Program
         Console.WriteLine("User3-CW");
         Console.WriteLine("Hello, World!");
         var str = StringStringBuilder();
-        str.Append("-OK");
+        str.Append("User2-Json");
+        Test(str.ToString());
         Console.WriteLine(str);
     }
 
@@ -19,5 +21,15 @@ internal class Program
         stringBuilder.Append("-");
         stringBuilder.Append("StringBuilder");
         return stringBuilder;
+    }
+
+    private static void Test(string description)
+    {
+        var str = JsonSerializer.Serialize(new
+        {
+            Name = "Test-User2-Json",
+            Description = description
+        });
+        Console.WriteLine(str);
     }
 }
