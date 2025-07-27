@@ -7,6 +7,7 @@ internal class Program
     {
         Console.WriteLine("Hello, World!");
         var str = StringStringBuilder();
+        str.Append("-OK");
         Console.WriteLine(str);
     }
 
@@ -14,6 +15,7 @@ internal class Program
     {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.Append("User1");
+        stringBuilder.Append("-");
         stringBuilder.Append("StringBuilder");
         return stringBuilder;
     }
