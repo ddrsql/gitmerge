@@ -5,6 +5,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("User3-CW");
         Console.WriteLine("Hello, World!");
         var str = StringStringBuilder();
         str.Append("-OK");
