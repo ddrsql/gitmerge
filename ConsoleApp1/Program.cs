@@ -15,7 +15,7 @@ internal class Program
     {
         var str = JsonSerializer.Serialize(new
         {
-            Name = "Test",
+            Name = "Test-User2-Json",
             Description = description
         });
         Console.WriteLine(str);
