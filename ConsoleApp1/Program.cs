@@ -8,6 +8,7 @@ internal class Program
     {
         Console.WriteLine("Hello, World!");
         var str = StringStringBuilder();
+        str.Append("User2-Json");
         Test(str.ToString());
         Console.WriteLine(str);
     }
